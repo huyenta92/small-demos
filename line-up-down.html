@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line Up Down</title>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_dwGMPRJ7zu.json" loop autoplay></lottie-player>
+  <div class="wrapper">
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+    <div class="line_item"></div>
+  </div>
+  <style>
+    body {
+      display: flex;
+      overflow: hidden;
+      background-color: #ffafcc;
+      align-items: flex-end;
+      height: 100vh;
+    }
+
+    lottie-player {
+      width: 100%;
+      height: auto;
+    }
+
+    .wrapper {
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+    }
+
+    .wrapper .line_item {
+      position: relative;
+      display: inline-block;
+      width: 20%;
+      height: 100%;
+      border-right: 5px solid rgba(255,255,255, 0.07);
+    }
+
+    .wrapper .line_item::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      right: -5px;
+      height: 120px;
+    }
+
+    .wrapper .line_item:nth-child(odd)::before {
+      animation: line-bottom-up 10s ease-out infinite;
+      background-image: linear-gradient(0deg, transparent, #fff);
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    .wrapper .line_item:nth-child(even)::before {
+      animation: line-top-down 10s ease-out infinite;
+      background-image: linear-gradient(0deg, #fff, transparent);
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    @keyframes line-top-down {
+      0% {
+        top: 0;
+        opacity: 1;
+      }
+      50% {
+        top: 50%;
+      }
+      100% {
+        top: 100%;
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes line-bottom-up {
+      0% {
+        opacity: 1;
+        bottom: 0;
+      }
+      50% {
+        bottom: 50%;
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0.5;
+      }
+    }
+  </style>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
